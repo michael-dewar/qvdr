@@ -1,0 +1,18 @@
+Package: qvdr
+Type: Package
+Title: Read QVD files in R using qvdreader
+Version: 0.0.0.9000
+Author: Michael Dewar
+Maintainer: Michael Dewar <michael@gmail.com>
+Description: Provides an R interface to the qvdreader C++ library for reading
+    Qlik QVD files, exposing both metadata and table data.
+Encoding: UTF-8
+LazyData: true
+LinkingTo: Rcpp
+Imports: Rcpp
+Suggests: testthat (>= 3.0.0)
+Config/testthat/edition: 3
+SystemRequirements: C++11, libxml2
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.3.3
+License: MIT + file LICENSE

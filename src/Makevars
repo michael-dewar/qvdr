@@ -1,0 +1,16 @@
+CXX_STD = CXX11
+
+XML2_CFLAGS = $(shell xml2-config --cflags 2>/dev/null || pkg-config --cflags libxml-2.0 2>/dev/null)
+XML2_LIBS   = $(shell xml2-config --libs 2>/dev/null || pkg-config --libs libxml-2.0 2>/dev/null)
+
+PKG_CPPFLAGS = -I$(srcdir)/qvdreader -I$(srcdir)/qvdreader/utils $(XML2_CFLAGS)
+PKG_LIBS = $(XML2_LIBS)
+
+OBJECTS = RcppExports.o \
+          qvd_interface.o \
+          qvdreader/LineageInfo.o \
+          qvdreader/QvdField.o \
+          qvdreader/QvdFile.o \
+          qvdreader/QvdTableHeader.o \
+          qvdreader/utils/conversions.o \
+          qvdreader/utils/dumphex.o
