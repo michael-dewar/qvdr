@@ -83,6 +83,11 @@ void QvdField::ParseXml(const xmlNode *node)
         Length = atoi((char *)nodeContent);
       } else if (strcmp((char *)child->name, "NumberFormat") == 0) {
         ParseNumberFormat(child);
+      } else if (strcmp((char *)child->name, "Tags") == 0) {
+        // Tags are optional metadata that the reader does not currently expose;
+        // ignore them silently instead of printing a noisy message for each
+        // field. Other unexpected elements still fall through to the warning
+        // below so they can be surfaced during development.
       } else {
         printf("Unprocessed QvdFieldHeader tag: %s\n", child->name);
       }
