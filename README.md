@@ -1,6 +1,6 @@
 # qvdr 
 
-`qvdr` wraps the vendored C++ (`qvdreader` library by Devin Smith)[https://github.com/devinsmith/qvdreader] to let R users explore QVD data files without spinning up QlikView or Qlik Sense.
+`qvdr` wraps the vendored C++ [`qvdreader` library by Devin Smith](https://github.com/devinsmith/qvdreader) to let R users explore QVD data files without spinning up QlikView or Qlik Sense.
 
 ## ⚠️ Use at Your Own Risk
 
